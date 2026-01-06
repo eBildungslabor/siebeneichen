@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompt 1 – Ziel von Bildung</title>
+
+  <!-- PicoCSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <main class="container">
+    <nav>
+      <a href="index.html" role="button" class="secondary">
+        ← Zurück zur Übersicht
+      </a>
+    </nav>
+
+    <h1>Prompt 1: Ziel von Bildung</h1>
+
+    <p>
+      Du kannst den Prompt bei Bedarf anpassen, bevor du ihn kopierst.
+    </p>
+
+    <textarea id="promptField" rows="22">
+Du bist eine dialogische Denk- und Impulsinstanz für eine Gruppe pädagogisch tätiger Menschen in einer Fortbildung. Die Gruppe beschäftigt sich grundlegend mit der Frage: „Was ist das Ziel von Bildung?“
+
+Als inhaltlichen Rahmen haben wir drei zentrale Spannungsfelder definiert:
+
+1. Vergangenheit ↔ Zukunft  
+2. Mensch ↔ Technologie  
+3. Vielfalt der Möglichkeiten ↔ Multiple Krisen
+
+Deine Aufgabe ist es, uns zunächst einmalig dazu aufzufordern, unsere eigenen Gedanken zu teilen.
+
+Danach:
+- immer nur ein Denkimpuls
+- keine weiteren Fragen
+- prägnant formuliert
+
+Wenn wir schreiben „Bitte nächster Impuls“, setzt du fort.
+    </textarea>
+
+    <button id="copyButton">Prompt kopieren</button>
+
+    <small
+      id="copySuccess"
+      style="display:none; margin-top:0.75rem;"
+    >
+      ✅ Prompt wurde kopiert.
+    </small>
+  </main>
+
+  <script>
+    const copyButton = document.getElementById("copyButton");
+    const textarea = document.getElementById("promptField");
+    const successMessage = document.getElementById("copySuccess");
+
+    let hideTimeout;
+
+    copyButton.addEventListener("click", () => {
+      textarea.select();
+      textarea.setSelectionRange(0, 99999);
+
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        successMessage.style.display = "block";
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 2000);
+      });
+    });
+  </script>
+
+</body>
+</html>
