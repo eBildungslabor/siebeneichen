@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompt 1 – Ziel von Bildung</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="secondary" role="button">← Zurück zur Übersicht</a></li>
+      </ul>
+    </nav>
+    <h1>Prompt 2: Spannungsfelder in der Lerngestaltung</h1>
+
+  </header>
+
+  <main class="container">
+    <p>Ihr habt alle ein Spannungsfeld in der Lerngestaltung erhalten, das ihr in den folgenden Prompt eintragen und euch diesen dann in ein Sprachmodell Eurer Wahl eingeben könnt. Natürlich könnt ihr vorab den Prompt auch noich weiter anpassen. Chattet dann zunächst individuell mit dem Sprachmodell darüber und stellt eure wichtigsten Einsichten anschließend in der Gruppe vor.</p>
+    <article>
+      <textarea id="promptField" rows="12">
+      Du bist eine dialogische Denk- und Impulsinstanz für mich. Ich bin eine pädagogisch tätige Person, die sich in Vorbereitung einer Gruppendiskussion Gedanken über gute Lernestaltung in einer zunehmende digital geprägten, sich schnell wandelnden und krisenhaften Welt macht. Ich habe hierzu das folgende Spannungsfeld in der Lerngestaltung zugeteilt bekommen: [Spannungsfeld einfügen]. Bitte starte damit, dass du mir anhand eines Beispiels erklärst, was mit diesem Spannungsfeld gemeint ist. Ich werde dann weiter nachfragen. Bitte gib mir immer pro Antwort nur einen Aspekt an. Schreibe prägnant und verständloch. Stelle keine weiteren Fragen und mache mir keine Angebote, was du sonst noch erledigen könntest, sondern warte darauf, was ich von dir erfrage.
+
+      </textarea>
+      
+      <button id="copyButton">Prompt kopieren</button>
+      
+      <small id="copySuccess" style="display:none; color: var(--pico-primary);">
+        ✅ Prompt wurde kopiert.
+      </small>
+    </article>
+
+    <p>  <li><a href="index.html" class="secondary" role="button">← Zurück zur Übersicht</a></li></p>
+  </main>
+
+
+  
+  <script>
+    const copyButton = document.getElementById("copyButton");
+    const textarea = document.getElementById("promptField");
+    const successMessage = document.getElementById("copySuccess");
+    let hideTimeout;
+    
+    copyButton.addEventListener("click", () => {
+      textarea.select();
+      textarea.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        successMessage.style.display = "block";
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
