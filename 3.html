@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompt 3 – IDG Kategorien</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="secondary" role="button">← Zurück zur Übersicht</a></li>
+      </ul>
+    </nav>
+    <h1>Prompt 3: Reflexion zu den einzelnen Kategorien der IDGs</h1>
+  </header>
+  
+  <main class="container">
+    <p>Untenstehend findet ihr vorbereitete Prompts für jede Kategorie der Inner Development Goals. Wählt euch eure Kategorie aus und passt den Prompt an: <strong>Löscht die Option, die ihr nicht braucht</strong> – entweder nutzt ihr den Kopfstand (absurde Anti-Beispiele sammeln) oder ihr dreht ihn schon um (konkrete Ideen entwickeln). Kopiert den angepassten Prompt dann in ein Sprachmodell eurer Wahl. Es ist ausreichend, wenn eine Person aus eurer Gruppe das macht und ihr den Output dann gemeinsam reflektiert.</p>
+
+    <!-- Kategorie SEIN -->
+    <article>
+      <h3>😊 Kategorie SEIN</h3>
+      <textarea id="promptSein" rows="14">Du bist ein*e kreative*r Bildungsexpert*in. Wir arbeiten als Gruppe im Rahmen einer Fortbildung an den Inner Development Goals (IDGs) und beschäftigen uns mit der Kategorie SEIN. Diese Kategorie fokussiert die Beziehung zu sich selbst: Lernende sollen ein stabiles inneres Fundament entwickeln, damit sie auch in komplexen Situationen handlungsfähig bleiben. Wer sich selbst gut kennt und versteht, was wirklich wichtig ist, kann authentischer agieren und bleibt orientiert. In einer digital geprägten Lebenswelt mit vielfältigen Möglichkeiten der Selbstdarstellung und Vernetzung hilft diese innere Klarheit, selbstbestimmt zu entscheiden. Dazu gehören Fähigkeiten wie: Selbstwahrnehmung, Selbstreflexion, innerer Kompass, Integrität, Offenheit, Lernbereitschaft, Präsenz.
+
+OPTION 1 (Kopfstand): Gib uns 3-5 prägnante, provokante Beispiele – was wäre das Dümmste, was wir in der Bildung tun könnten, damit diese Kategorie garantiert NICHT erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.
+
+OPTION 2 (Kopfstand umdrehen): Gib uns 3-5 prägnante, konkrete Ideen – was wäre sinnvoll und wichtig in der Bildung, damit diese Kategorie erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.</textarea>
+      <button onclick="copyPrompt('promptSein', 'successSein')">Prompt kopieren</button>
+      <small id="successSein" style="display:none; color: var(--pico-primary);">
+        ✅ Prompt wurde kopiert.
+      </small>
+    </article>
+
+    <!-- Kategorie DENKEN -->
+    <article>
+      <h3>❓ Kategorie DENKEN</h3>
+      <textarea id="promptDenken" rows="14">Du bist ein*e kreative*r Bildungsexpert*in. Wir arbeiten als Gruppe im Rahmen einer Fortbildung an den Inner Development Goals (IDGs) und beschäftigen uns mit der Kategorie DENKEN. Diese Kategorie fokussiert kognitive Fähigkeiten: Lernende sollen komplexe Zusammenhänge verstehen und mit Unsicherheit umgehen können, um informierte und reflektierte Entscheidungen zu treffen. Digitale Technologien eröffnen Zugang zu vielen Perspektiven und Wissensquellen – eine Chance zum Erkunden und Lernen. Um diese Möglichkeiten gewinnbringend zu nutzen, braucht es die Fähigkeit, verschiedene Standpunkte einzunehmen, Informationen kritisch einzuordnen und eigene Schlüsse zu ziehen. Dazu gehören Fähigkeiten wie: kritisches Denken, Perspektivenvielfalt, Sensemaking, Bewusstsein für Komplexität, langfristiges Denken.
+
+OPTION 1 (Kopfstand): Gib uns 3-5 prägnante, provokante Beispiele – was wäre das Dümmste, was wir in der Bildung tun könnten, damit diese Kategorie garantiert NICHT erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.
+
+OPTION 2 (Kopfstand umdrehen): Gib uns 3-5 prägnante, konkrete Ideen – was wäre sinnvoll und wichtig in der Bildung, damit diese Kategorie erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.</textarea>
+      <button onclick="copyPrompt('promptDenken', 'successDenken')">Prompt kopieren</button>
+      <small id="successDenken" style="display:none; color: var(--pico-primary);">
+        ✅ Prompt wurde kopiert.
+      </small>
+    </article>
+
+    <!-- Kategorie BEZIEHUNG -->
+    <article>
+      <h3>❤️ Kategorie BEZIEHUNG</h3>
+      <textarea id="promptBeziehung" rows="14">Du bist ein*e kreative*r Bildungsexpert*in. Wir arbeiten als Gruppe im Rahmen einer Fortbildung an den Inner Development Goals (IDGs) und beschäftigen uns mit der Kategorie BEZIEHUNG. Diese Kategorie fokussiert Fürsorge und Verbundenheit mit anderen: Lernende sollen echte Beziehungen aufbauen und Empathie entwickeln, damit sie sich als Teil einer größeren Gemeinschaft verstehen. Lernen ist immer auch ein sozialer Prozess. Digitale Räume erweitern unsere Möglichkeiten, mit Menschen überall auf der Welt in Kontakt zu treten und gemeinsam zu lernen. Gleichzeitig braucht es Empathie und Wertschätzung, um diese Verbindungen – ob analog oder digital – lebendig und bedeutsam zu gestalten. Dazu gehören Fähigkeiten wie: Wertschätzung, Verbundenheit, Demut, Empathie, Mitgefühl.
+
+OPTION 1 (Kopfstand): Gib uns 3-5 prägnante, provokante Beispiele – was wäre das Dümmste, was wir in der Bildung tun könnten, damit diese Kategorie garantiert NICHT erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.
+
+OPTION 2 (Kopfstand umdrehen): Gib uns 3-5 prägnante, konkrete Ideen – was wäre sinnvoll und wichtig in der Bildung, damit diese Kategorie erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.</textarea>
+      <button onclick="copyPrompt('promptBeziehung', 'successBeziehung')">Prompt kopieren</button>
+      <small id="successBeziehung" style="display:none; color: var(--pico-primary);">
+        ✅ Prompt wurde kopiert.
+      </small>
+    </article>
+
+    <!-- Kategorie ZUSAMMENARBEIT -->
+    <article>
+      <h3>💬 Kategorie ZUSAMMENARBEIT</h3>
+      <textarea id="promptZusammenarbeit" rows="14">Du bist ein*e kreative*r Bildungsexpert*in. Wir arbeiten als Gruppe im Rahmen einer Fortbildung an den Inner Development Goals (IDGs) und beschäftigen uns mit der Kategorie ZUSAMMENARBEIT. Diese Kategorie fokussiert soziale Fähigkeiten: Lernende sollen konstruktiv mit anderen zusammenarbeiten können, um gemeinsam Lösungen zu entwickeln und Veränderungen zu gestalten. Digitale Tools eröffnen völlig neue Möglichkeiten der Kollaboration: gemeinsam an Dokumenten arbeiten, Ideen in Echtzeit teilen, kreative Projekte über Distanzen hinweg entwickeln. Diese Potenziale zu nutzen erfordert soziale Fähigkeiten wie konstruktive Kommunikation und die Bereitschaft, verschiedene Perspektiven einzubeziehen. Dazu gehören Fähigkeiten wie: Kommunikationsfähigkeit, Co-Creation, inklusive Haltung, Vertrauen, Mobilisierungsfähigkeit.
+
+OPTION 1 (Kopfstand): Gib uns 3-5 prägnante, provokante Beispiele – was wäre das Dümmste, was wir in der Bildung tun könnten, damit diese Kategorie garantiert NICHT erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.
+
+OPTION 2 (Kopfstand umdrehen): Gib uns 3-5 prägnante, konkrete Ideen – was wäre sinnvoll und wichtig in der Bildung, damit diese Kategorie erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.</textarea>
+      <button onclick="copyPrompt('promptZusammenarbeit', 'successZusammenarbeit')">Prompt kopieren</button>
+      <small id="successZusammenarbeit" style="display:none; color: var(--pico-primary);">
+        ✅ Prompt wurde kopiert.
+      </small>
+    </article>
+
+    <!-- Kategorie HANDELN -->
+    <article>
+      <h3>➡️ Kategorie HANDELN</h3>
+      <textarea id="promptHandeln" rows="14">Du bist ein*e kreative*r Bildungsexpert*in. Wir arbeiten als Gruppe im Rahmen einer Fortbildung an den Inner Development Goals (IDGs) und beschäftigen uns mit der Kategorie HANDELN. Diese Kategorie fokussiert die Fähigkeit, Veränderung zu ermöglichen: Lernende sollen vom Denken ins Tun kommen und wirksam werden, um aktiv zur Gestaltung einer zukunftsfähigen Welt beizutragen. Digitale Technologien sind Werkzeuge, mit denen wir unsere Lebenswelt aktiv gestalten können – durch kreative Projekte, Teilen von Wissen oder Initiativen für Veränderung. Wenn Lernende diese Gestaltungsmöglichkeiten erkunden und erleben, dass sie selbst etwas bewirken können, stärkt das ihre Selbstwirksamkeit und ihren Gestaltungswillen. Dazu gehören Fähigkeiten wie: Mut, Kreativität, Optimismus, Ausdauer.
+
+OPTION 1 (Kopfstand): Gib uns 3-5 prägnante, provokante Beispiele – was wäre das Dümmste, was wir in der Bildung tun könnten, damit diese Kategorie garantiert NICHT erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.
+
+OPTION 2 (Kopfstand umdrehen): Gib uns 3-5 prägnante, konkrete Ideen – was wäre sinnvoll und wichtig in der Bildung, damit diese Kategorie erreicht wird? Antworte knapp und konkret, stelle keine Rückfragen.</textarea>
+      <button onclick="copyPrompt('promptHandeln', 'successHandeln')">Prompt kopieren</button>
+      <small id="successHandeln" style="display:none; color: var(--pico-primary);">
+        ✅ Prompt wurde kopiert.
+      </small>
+    </article>
+
+    <p><a href="2.html" class="secondary" role="button">← Zurück zur Arbeitsanleitung</a></p>
+  </main>
+
+  <script>
+    function copyPrompt(textareaId, successId) {
+      const textarea = document.getElementById(textareaId);
+      const successMessage = document.getElementById(successId);
+      
+      textarea.select();
+      textarea.setSelectionRange(0, 99999);
+      
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        successMessage.style.display = "block";
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
